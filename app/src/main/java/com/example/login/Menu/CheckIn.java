@@ -1,4 +1,4 @@
-package com.example.login.CheckIn;
+package com.example.login.Menu;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,8 +10,6 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.login.Activity_Menu;
-import com.example.login.Login.Activity_ResetPassword;
 import com.example.login.R;
 import com.example.login.Retrofit.APIUtils;
 import com.example.login.Retrofit.DataClient;

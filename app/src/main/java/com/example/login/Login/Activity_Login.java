@@ -1,4 +1,4 @@
-package com.example.login;
+package com.example.login.Login;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,14 +7,14 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.login.Login.Activity_Forgotpassword;
+import com.example.login.Activity_Menu;
+import com.example.login.MainActivity;
+import com.example.login.R;
 import com.example.login.Retrofit.APIUtils;
 import com.example.login.Retrofit.DataClient;
 

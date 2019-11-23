@@ -12,44 +12,44 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-public class Activity_Menu<card_checkin> extends AppCompatActivity {
+import com.example.login.Menu.CheckIn;
+import com.example.login.Menu.Grade;
 
+public class Activity_Menu<card_checkin> extends AppCompatActivity  implements View.OnClickListener {
     SharedPreferences sharedPreferences;
-
-
-    CardView card_checkin;
-    CardView card_grades;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity__menu);
-
-
         sharedPreferences = getSharedPreferences("USER", MODE_PRIVATE);
 
-        Toast.makeText(this, sharedPreferences.getString("ID", "") + "df", Toast.LENGTH_SHORT).show();
-
-
-        //Activity CHECKIN
-        card_checkin = (CardView) findViewById(R.id.cardview_checkin);
-        card_checkin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent_cardview_checkin = new Intent(Activity_Menu.this, Activity_Checkin.class);
-                startActivity(intent_cardview_checkin);
-            }
-        });
-
-        //Activity GRADES
-        card_grades = (CardView) findViewById(R.id.cardview_grades);
-        card_grades.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent_cardview_grades = new Intent(Activity_Menu.this, Activity_Grades.class);
-                startActivity(intent_cardview_grades);
-            }
-        });
+        initViews();
     }
 
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.cardview_checkin:
+                Intent intent_cardview_checkin = new Intent(Activity_Menu.this, CheckIn.class);
+                startActivity(intent_cardview_checkin);
+                break;
+            case R.id.cardview_grades:
+                Intent intent_cardview_grades = new Intent(Activity_Menu.this, Grade.class);
+                startActivity(intent_cardview_grades);
+                break;
+             default:
+                 break;
+
+        }
+    }
+    private void initViews(){
+        findViewById(R.id.cardview_checkin).setOnClickListener(this);
+        findViewById(R.id.cardview_grades).setOnClickListener(this);
+        findViewById(R.id.cardview_deadline).setOnClickListener(this);
+        findViewById(R.id.cardview_infor).setOnClickListener(this);
+        findViewById(R.id.cardview_timetable).setOnClickListener(this);
+        findViewById(R.id.cardview_tuitionfee).setOnClickListener(this);
+
+    }
 }

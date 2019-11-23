@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity_Grades"
+    tools:context=".Menu.Grade"
     android:background="@drawable/bg_details">
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
