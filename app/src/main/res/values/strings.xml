@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Login</string>
+    <string name="name">Nguyễn Trí Tâm</string>
+    <string name="ID">17521006</string>
+    <string name="checkin">Check-in</string>
+    <string name="info">Informations</string>
+    <string name="grades">Grades</string>
+    <string name="tkb">Timetable</string>
+    <string name="deadline">Deadline</string>
+    <string name="hocphi">Tuition-fee</string>
+</resources>
