@@ -2,6 +2,9 @@ package com.example.login.Retrofit;
 
 import com.example.login.Menu.TKB.TKB;
 
+import com.example.login.Menu.CheckIn.CheckInList;
+
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,6 +41,10 @@ public interface DataClient {
 
     @GET("/api/diemdanh/{TOKEN}/{MAHV}")
     Call <String> checkIn(@Path("TOKEN") String TOKEN, @Path("MAHV") String MAHV);
+
+    @GET("/api/checkInInfor/{MAHV}")
+    Call <ArrayList<CheckInList>> getCheckInInfor(@Path("MAHV") String MAHV);
+
 
 
     //Timetable

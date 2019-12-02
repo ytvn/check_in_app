@@ -22,7 +22,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class Activity_Login extends AppCompatActivity implements View.OnClickListener{
+public class    Activity_Login extends AppCompatActivity implements View.OnClickListener{
     EditText et_user,et_password ;
     TextView tv_forgotPass;
     CheckBox cbRememberMe;
@@ -60,6 +60,7 @@ public class Activity_Login extends AppCompatActivity implements View.OnClickLis
                 else {
                     getLogin(mahv, password);
                     sharedPreferences.edit().putString("ID", mahv).apply();
+
                 }
                 break;
             case R.id.tv_FogotPassword_log:
