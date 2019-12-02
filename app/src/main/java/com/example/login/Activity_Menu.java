@@ -1,7 +1,6 @@
 package com.example.login;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 
 
 import android.content.SharedPreferences;
@@ -10,9 +9,8 @@ import android.content.Intent;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
 
-import com.example.login.Menu.CheckIn;
+import com.example.login.Menu.CheckIn.CheckIn;
 import com.example.login.Menu.Grade;
 
 public class Activity_Menu<card_checkin> extends AppCompatActivity  implements View.OnClickListener {
