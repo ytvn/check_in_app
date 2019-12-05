@@ -56,7 +56,7 @@ public class AdapterList extends BaseAdapter {
         }
 
         CheckInList checkInList = checkInLists.get(position);
-        holder.tvCheckInList.setText("Sinh viên " + checkInList.getMAHV() +" điểm danh thành công lớp:\n" +
+        holder.tvCheckInList.setText("Sinh viên " + checkInList.getMAHV() +" điểm danh thành công lớp: " +
                 checkInList.getMAMH() + "\n" +
                 checkInList.getTime());
         return convertView;

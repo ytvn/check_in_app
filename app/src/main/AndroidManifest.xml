@@ -17,7 +17,9 @@
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".Menu.Grade"></activity>
-        <activity android:name=".Menu.CheckIn.CheckIn"></activity>
+        <activity android:name=".Menu.CheckIn.CheckIn">
+
+        </activity>
         <activity android:name=".Login.Activity_ResetPassword" />
         <activity android:name=".Login.Activity_Login">
             <intent-filter>
@@ -26,7 +28,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity_Menu"></activity>
+        <activity android:name=".Activity_Menu">
+
+        </activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".Login.Activity_Forgotpassword" />
     </application>
