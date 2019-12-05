@@ -20,7 +20,9 @@
         <activity android:name=".Menu.TKB.Activity_TKB"/>
 
         <activity android:name=".Menu.Grade"></activity>
-        <activity android:name=".Menu.CheckIn.CheckIn"></activity>
+        <activity android:name=".Menu.CheckIn.CheckIn">
+
+        </activity>
         <activity android:name=".Login.Activity_ResetPassword" />
         <activity android:name=".Login.Activity_Login">
             <intent-filter>
@@ -32,7 +34,11 @@
 
 
 
+
         <activity android:name=".Activity_Menu" />
+
+    
+
         <activity android:name=".MainActivity" />
         <activity android:name=".Login.Activity_Forgotpassword" />
     </application>
