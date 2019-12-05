@@ -11,7 +11,8 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.login.Menu.CheckIn.CheckIn;
-import com.example.login.Menu.Grade;
+import com.example.login.Menu.Grade.Activity_Grade;
+import com.example.login.Menu.TKB.Activity_TKB;
 
 public class Activity_Menu<card_checkin> extends AppCompatActivity  implements View.OnClickListener {
     SharedPreferences sharedPreferences;
@@ -33,9 +34,12 @@ public class Activity_Menu<card_checkin> extends AppCompatActivity  implements V
                 startActivity(intent_cardview_checkin);
                 break;
             case R.id.cardview_grades:
-                Intent intent_cardview_grades = new Intent(Activity_Menu.this, Grade.class);
+                Intent intent_cardview_grades = new Intent(Activity_Menu.this, Activity_Grade.class);
                 startActivity(intent_cardview_grades);
                 break;
+            case R.id.cardview_timetable:
+                Intent intent_cardview_timeTable = new Intent(Activity_Menu.this, Activity_TKB.class);
+                startActivity(intent_cardview_timeTable);
              default:
                  break;
 

@@ -48,8 +48,8 @@ public interface DataClient {
 
 
     //Timetable
-    @GET("api/tkb")
-    Call<List<TKB>> getTKB();
+    @GET("api/tkb/{MAHV}")
+    Call<List<TKB>> getTKB(@Path("MAHV") String MAHV);
 
 
 

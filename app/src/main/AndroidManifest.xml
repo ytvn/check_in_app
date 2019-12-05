@@ -17,17 +17,21 @@
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
 
-        <activity android:name=".Menu.TKB.Activity_TKB"/>
+        <activity android:name=".Menu.TKB.Activity_TKB">
 
-        <activity android:name=".Menu.Grade"></activity>
-        <activity android:name=".Menu.CheckIn.CheckIn"></activity>
-        <activity android:name=".Login.Activity_ResetPassword" />
-        <activity android:name=".Login.Activity_Login">
+        </activity>
+
+        <activity android:name=".Menu.Grade.Activity_Grade">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".Menu.CheckIn.CheckIn"></activity>
+        <activity android:name=".Login.Activity_ResetPassword" />
+        <activity android:name=".Login.Activity_Login">
+
         </activity>
 
 
