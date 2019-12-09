@@ -44,6 +44,7 @@ public class Activity_Menu<card_checkin> extends AppCompatActivity  implements V
                  break;
 
         }
+        overridePendingTransition(R.anim.anim_enter,R.anim.anim_out);
     }
     private void initViews(){
         findViewById(R.id.cardview_checkin).setOnClickListener(this);

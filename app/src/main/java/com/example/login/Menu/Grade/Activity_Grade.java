@@ -1,7 +1,10 @@
 package com.example.login.Menu.Grade;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
@@ -9,7 +12,10 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.login.Activity_Menu;
+import com.example.login.Menu.CheckIn.CheckIn;
 import com.example.login.R;
+
 
 import java.awt.font.TextAttribute;
 import android.view.WindowManager;
@@ -20,25 +26,35 @@ public class Activity_Grade extends AppCompatActivity {
     private static int SCREEN_WIDTH;
     LinearLayout table;
     TableLayout tableLayout;
+    Button btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grade);
         table = (LinearLayout) findViewById(R.id.table);
+        btn = (Button) findViewById(R.id.btn_home);
         tableLayout = new TableLayout(this);
         displayTable();
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent_cardview_checkin = new Intent(Activity_Grade.this, Activity_Menu.class);
+                startActivity(intent_cardview_checkin);
+                overridePendingTransition(R.anim.anim_forward,R.anim.anim_back);
+            }
+        });
 
     }
 
-    private void getScreenDimension() {
-        WindowManager wm = (WindowManager) getApplicationContext().getSystemService(Context.WINDOW_SERVICE);
-        Display display = wm.getDefaultDisplay();
-        Point size = new Point();
-        display.getSize(size);
-        SCREEN_WIDTH = size.x;
-        SCREEN_HEIGHT = size.y;
-    }
+//    private void getScreenDimension() {
+//        WindowManager wm = (WindowManager) getApplicationContext().getSystemService(Context.WINDOW_SERVICE);
+//        Display display = wm.getDefaultDisplay();
+//        Point size = new Point();
+//        display.getSize(size);
+//        SCREEN_WIDTH = size.x;
+//        SCREEN_HEIGHT = size.y;
+//    }
 
     public void displayTable() {
         tableLayout.setLayoutParams(new TableLayout.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT,TableLayout.LayoutParams.WRAP_CONTENT));
