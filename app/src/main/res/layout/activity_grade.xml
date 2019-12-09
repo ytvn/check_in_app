@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Menu.Grade.Activity_Grade"
+    android:orientation="vertical"
     android:background="@drawable/bg_details">
     <LinearLayout
         android:id="@+id/table"
@@ -12,6 +13,7 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:background="@color/pink"
+        android:layout_weight="5"
         android:layout_height="wrap_content">
         <TableLayout
             android:layout_width="match_parent"
@@ -51,6 +53,14 @@
 
     </LinearLayout>
 
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/btn_home"
+        android:background="@drawable/home"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center_horizontal" />
 
 </LinearLayout>
 

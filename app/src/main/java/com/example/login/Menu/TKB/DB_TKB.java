@@ -42,7 +42,7 @@ public class DB_TKB extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(sqlQuery);
 
-        Toast.makeText(context, "Create successfylly", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(context, "Create successfylly", Toast.LENGTH_SHORT).show();
         Log.d(TAG,"onCreate");
     }
 
