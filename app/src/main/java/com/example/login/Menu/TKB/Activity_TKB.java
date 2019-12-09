@@ -60,6 +60,7 @@ public class Activity_TKB extends AppCompatActivity {
         //Khoiwr tao view
         Init();
         //
+
         db_tkb = new DB_TKB(getApplicationContext());
         db_tkb.clearTable();
 
