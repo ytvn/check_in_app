@@ -44,6 +44,7 @@ public class Activity_TKB extends AppCompatActivity {
     private SharedPreferences sharedPreferences;
     private  String ID ;
     private  String MAMH;
+    private Context context;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,7 +54,7 @@ public class Activity_TKB extends AppCompatActivity {
         //Toast.makeText(this, day+"", Toast.LENGTH_SHORT).show();
         Init();
 
-        db_tkb = new DB_TKB(getBaseContext());
+        db_tkb = new DB_TKB(getApplicationContext());
         db_tkb.clearTable();
         sharedPreferences = getSharedPreferences("USER", MODE_PRIVATE);
         ID = sharedPreferences.getString("ID", "");
