@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.login">
 
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -16,23 +16,16 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
-
-        <activity android:name=".Menu.TKB.Activity_TKB">
-
-        </activity>
-
-
-        <activity android:name=".Menu.Grade.Activity_Grade"/>
-        <activity android:name=".Menu.CheckIn.CheckIn">
+        <activity android:name=".Menu.About.Activity_About">
 
         </activity>
+        <activity android:name=".Menu.Info.Activity_Info" >
+
+        </activity>>
+        <activity android:name=".Menu.TKB.Activity_TKB" />
+        <activity android:name=".Menu.Grade.Activity_Grade" />
+        <activity android:name=".Menu.CheckIn.CheckIn" />
         <activity android:name=".Login.Activity_ResetPassword" />
-
-
-
-
-
-
         <activity android:name=".Login.Activity_Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -40,16 +33,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
->>>>>>> tuan
-
-
-
         <activity android:name=".Activity_Menu" />
-
-    
-
         <activity android:name=".MainActivity" />
         <activity android:name=".Login.Activity_Forgotpassword" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
     </application>
 
 </manifest>
