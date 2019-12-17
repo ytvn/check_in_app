@@ -5,14 +5,9 @@ public class APIUtils {
 //    public static final String Base_Url="http:172.30.99.190:8000";
 
 //public static final String Base_Url="http://192.168.240.1:8000";
-public static final String Base_Url="http://172.30.174.128:8000";
-
-
+public static final String Base_Url="http://192.168.43.194:8000";
 
 //    public static final String Base_Url="http:172.30.99.190:8000";
-
-
-
 
     //nhan va gui data di, lam trung gian cho interface
     public static DataClient getData(){

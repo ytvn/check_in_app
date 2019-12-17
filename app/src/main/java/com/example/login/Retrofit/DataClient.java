@@ -17,7 +17,7 @@ import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 public interface DataClient {
-    @GET("api/get/")
+    @GET("api/test/")
     Call<String> get();
     @GET("android")
     Call<String> getJson();

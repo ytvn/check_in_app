@@ -53,8 +53,8 @@ public class Activity_TKB extends AppCompatActivity {
         //Toast.makeText(this, day+"", Toast.LENGTH_SHORT).show();
         Init();
 
-        db_tkb = new DB_TKB(getBaseContext());
-        db_tkb.clearTable();
+        db_tkb = new DB_TKB(getApplicationContext());
+        //db_tkb.clearTable();
         sharedPreferences = getSharedPreferences("USER", MODE_PRIVATE);
         ID = sharedPreferences.getString("ID", "");
         DataClient dataClient = APIUtils.getData();
