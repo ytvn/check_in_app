@@ -2,6 +2,7 @@ package com.example.login.Menu.TKB;
 
 import android.annotation.SuppressLint;
 import android.app.Fragment;
+import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -35,15 +36,20 @@ public class FragmentTKB extends Fragment {
     public FragmentTKB(int day) {
         this.day = day;
     }
-
+    
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+
+        //KHoi tao fragment
         View view = inflater.inflate(R.layout.fragment_tkb,container,false);
+
+
         recyclerView = (RecyclerView) view.findViewById(R.id.rv_tkb);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         final CustomAdapter customAdapter = new CustomAdapter(getContext(),tkbList);
+
         db_tkb = new DB_TKB(getContext());
 
         List<TKB> t =null;

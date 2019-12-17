@@ -5,43 +5,75 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Menu.Grade.Activity_Grade"
+    android:orientation="vertical"
     android:background="@drawable/bg_details">
+    <TextView
+        android:gravity="center"
+        android:layout_width="match_parent"
+
+        android:text="GRADE"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_height="50dp"/>
     <LinearLayout
+        android:padding="10dp"
         android:id="@+id/table"
-        android:layout_marginTop="90dp"
+        android:layout_marginTop="50dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:background="@color/pink"
+        android:layout_weight="7"
         android:layout_height="wrap_content">
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white">
+            android:background="@color/field">
             <TableRow>
                 <TextView
-                    android:layout_width="100dp"
+                    android:layout_width="300px"
                     android:text="MAMH"
                     android:layout_weight="1"
                     android:gravity="center"
                     android:background="@drawable/border_table"
                     android:layout_height="match_parent"/>
                 <TextView
-                    android:layout_width="100dp"
-                    android:text="LANTHI"
+                    android:layout_width="300px"
+                    android:text="TINCHI"
                     android:layout_weight="1"
                     android:gravity="center"
                     android:background="@drawable/border_table"
                     android:layout_height="match_parent"/>
                 <TextView
-                    android:layout_width="100dp"
-                    android:text="DIEM"
+                    android:layout_width="250px"
+                    android:text="QT"
                     android:layout_weight="1"
                     android:gravity="center"
                     android:background="@drawable/border_table"
                     android:layout_height="match_parent"/>
                 <TextView
-                    android:layout_width="100dp"
-                    android:text="KETQUA"
+                    android:layout_width="250px"
+                    android:text="TH"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="@drawable/border_table"
+                    android:layout_height="match_parent"/>
+                <TextView
+                    android:layout_width="250px"
+                    android:text="GK"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="@drawable/border_table"
+                    android:layout_height="match_parent"/>
+                <TextView
+                    android:layout_width="250px"
+                    android:text="CK"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="@drawable/border_table"
+                    android:layout_height="match_parent"/>
+                <TextView
+                    android:layout_width="250px"
+                    android:text="TB"
                     android:layout_weight="1"
                     android:gravity="center"
                     android:background="@drawable/border_table"
@@ -51,6 +83,14 @@
 
     </LinearLayout>
 
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/btn_home"
+        android:background="@drawable/home"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center_horizontal" />
 
 </LinearLayout>
 
