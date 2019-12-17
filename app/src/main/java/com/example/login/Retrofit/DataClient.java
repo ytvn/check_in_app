@@ -1,7 +1,5 @@
 package com.example.login.Retrofit;
 
-import com.example.login.Menu.Grade.Grade;
-import com.example.login.Menu.Info.Info;
 import com.example.login.Menu.TKB.TKB;
 
 import com.example.login.Menu.CheckIn.CheckInList;
@@ -52,17 +50,6 @@ public interface DataClient {
     //Timetable
     @GET("api/tkb/{MAHV}")
     Call<List<TKB>> getTKB(@Path("MAHV") String MAHV);
-
-    //Grade
-    @GET("api/grade/{MAHV}")
-    Call<List<Grade>> getGrade(@Path("MAHV") String MAHV);
-
-    //Info
-//    @GET("api/info/{MAHV}")
-//    Call<Info> getInfo(@Path("MAHV") String MAHV);
-
-    @GET("api/info/{MAHV}")
-    Call<List<Info>> getInfo(@Path("MAHV") String MAHV);
 
 
 

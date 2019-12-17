@@ -2,7 +2,6 @@ package com.example.login.Menu.TKB;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
@@ -16,7 +15,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.example.login.MainActivity;
 import com.example.login.R;
 import com.example.login.Retrofit.APIUtils;
 import com.example.login.Retrofit.DataClient;
@@ -46,32 +44,19 @@ public class Activity_TKB extends AppCompatActivity {
     private SharedPreferences sharedPreferences;
     private  String ID ;
     private  String MAMH;
-    private Context context;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tkb);
-        //get current date to show the timetable
         Calendar c = Calendar.getInstance();
         final int day = c.get(Calendar.DAY_OF_WEEK);
         //Toast.makeText(this, day+"", Toast.LENGTH_SHORT).show();
-
-        //Khoiwr tao view
         Init();
-        //
 
         db_tkb = new DB_TKB(getApplicationContext());
-
         //db_tkb.clearTable();
-
-        db_tkb.clearTable();
-
-
         sharedPreferences = getSharedPreferences("USER", MODE_PRIVATE);
         ID = sharedPreferences.getString("ID", "");
-
-
         DataClient dataClient = APIUtils.getData();
         Call<List<TKB>> call = dataClient.getTKB(ID);
         call.enqueue(new Callback<List<TKB>>() {
@@ -99,7 +84,7 @@ public class Activity_TKB extends AppCompatActivity {
             public void run() {
                 OnClick(day);
             }
-        }, 1000);
+        }, 500);
 
 
     }
