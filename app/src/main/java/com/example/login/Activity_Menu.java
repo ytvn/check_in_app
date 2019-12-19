@@ -17,8 +17,9 @@ import android.widget.Toast;
 import com.example.login.Menu.CheckIn.CheckIn;
 import com.example.login.Menu.TKB.Activity_TKB;
 import com.example.login.Menu.Grade.Activity_Grade;
-import com.squareup.picasso.Picasso;
+
 import com.example.login.Menu.TKB.Activity_TKB;
+import com.squareup.picasso.Picasso;
 
 
 public class Activity_Menu<card_checkin> extends AppCompatActivity  implements View.OnClickListener {
@@ -74,7 +75,8 @@ public class Activity_Menu<card_checkin> extends AppCompatActivity  implements V
         String imageUri = getString(R.string.domain) + img;
         ivAvatar=  findViewById(R.id.ivAvatar);
 
-        Picasso.get().load("http://10.14.0.90:8000/assets/avt.jpg")
+
+        Picasso.get().load("http://10.45.179.85:8000/assets/avt.jpg")
                 .placeholder(R.drawable.human)
                 .error(R.drawable.human)
                 .into(ivAvatar);

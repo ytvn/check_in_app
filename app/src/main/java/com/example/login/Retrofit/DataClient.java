@@ -1,8 +1,7 @@
 package com.example.login.Retrofit;
 
 import com.example.login.Login.Result;
-import com.example.login.Menu.Grade.Grade;
-import com.example.login.Menu.Info.Info;
+
 import com.example.login.Menu.TKB.TKB;
 import com.example.login.Menu.CheckIn.CheckInList;
 
