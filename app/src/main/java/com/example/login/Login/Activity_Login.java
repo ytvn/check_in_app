@@ -74,15 +74,17 @@ public class    Activity_Login extends AppCompatActivity implements View.OnClick
 
     private void getLogin(String mahv, String password){
         DataClient dataClient= APIUtils.getData();
-        Call<String> callback = dataClient.login(mahv, password );
-        callback.enqueue(new Callback<String>() {
+        Call<Result> callback = dataClient.login(mahv, password );
+        callback.enqueue(new Callback<Result>() {
             @Override
-            public void onResponse(Call<String> call, Response<String> response) {
+            public void onResponse(Call<Result> call, Response<Result> response) {
                 if (response != null) {
-                    String message = response.body();
-                    Log.d("BBB", message);
-                    if(message.equals("1")) {
+                    Result message = response.body();
+//                    Log.d("BBB", message);
+                    if(message.getStatus().equals("1")) {
                         rememberMe();
+                        sharedPreferences.edit().putString("NAME", message.getTEN()).apply();
+                        sharedPreferences.edit().putString("IMAGE", message.getANH()).apply();
                         Toast.makeText(Activity_Login.this, "Wellcome!!!", Toast.LENGTH_SHORT).show();
                         Intent intent_Menu = new Intent(Activity_Login.this, Activity_Menu.class);
                         startActivity(intent_Menu);
@@ -94,7 +96,7 @@ public class    Activity_Login extends AppCompatActivity implements View.OnClick
                 }
             }
             @Override
-            public void onFailure(Call<String> call, Throwable t) {
+            public void onFailure(Call<Result> call, Throwable t) {
 
             }
 

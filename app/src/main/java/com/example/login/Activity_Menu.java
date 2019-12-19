@@ -3,28 +3,39 @@ package com.example.login;
 import androidx.appcompat.app.AppCompatActivity;
 
 
+import android.content.Context;
 import android.content.SharedPreferences;
 
 import android.content.Intent;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.login.Menu.CheckIn.CheckIn;
 import com.example.login.Menu.TKB.Activity_TKB;
 import com.example.login.Menu.Grade.Activity_Grade;
+import com.squareup.picasso.Picasso;
+import com.example.login.Menu.TKB.Activity_TKB;
 
 
 public class Activity_Menu<card_checkin> extends AppCompatActivity  implements View.OnClickListener {
     SharedPreferences sharedPreferences;
+    TextView tvID, tvName;
+    ImageView ivAvatar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity__menu);
         sharedPreferences = getSharedPreferences("USER", MODE_PRIVATE);
+//        Picasso.get().load("http://i.imgur.com/DvpvklR.png").into(ivAvatar);
 
         initViews();
+
     }
 
     @Override
@@ -53,6 +64,20 @@ public class Activity_Menu<card_checkin> extends AppCompatActivity  implements V
         findViewById(R.id.cardview_infor).setOnClickListener(this);
         findViewById(R.id.cardview_timetable).setOnClickListener(this);
         findViewById(R.id.cardview_tuitionfee).setOnClickListener(this);
+
+        tvID = findViewById(R.id.tvStudentID);
+        tvName = findViewById(R.id.tvStudentName);
+        ivAvatar = findViewById(R.id.ivAvatar);
+        tvName.setText(sharedPreferences.getString("NAME",""));
+        tvID.setText(sharedPreferences.getString("ID",""));
+        String img =sharedPreferences.getString("IMAGE","");
+        String imageUri = getString(R.string.domain) + img;
+        ivAvatar=  findViewById(R.id.ivAvatar);
+
+        Picasso.get().load("http://10.14.0.90:8000/assets/avt.jpg")
+                .placeholder(R.drawable.human)
+                .error(R.drawable.human)
+                .into(ivAvatar);
 
     }
 }

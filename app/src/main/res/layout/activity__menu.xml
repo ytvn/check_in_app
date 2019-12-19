@@ -21,17 +21,19 @@
         android:layout_marginTop="20dp"
         android:layout_marginRight="10dp">
 
-        <ImageButton
-            android:id="@+id/imageButton"
+
+        <ImageView
+            android:id="@+id/ivAvatar"
             android:layout_width="60dp"
             android:layout_height="58dp"
-            android:background="@drawable/avt"
+
+            android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent">
-
-        </ImageButton>
+        </ImageView>
 
         <TextView
+            android:id="@+id/tvStudentName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -39,12 +41,13 @@
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/imageButton"
+            app:layout_constraintEnd_toStartOf="@+id/ivAvatar"
             app:layout_constraintTop_toTopOf="parent">
 
         </TextView>
 
         <TextView
+            android:id="@+id/tvStudentID"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="28dp"
@@ -52,7 +55,7 @@
             android:text="@string/ID"
             android:textColor="@color/white"
             android:textSize="20sp"
-            app:layout_constraintEnd_toStartOf="@+id/imageButton"
+            app:layout_constraintEnd_toStartOf="@+id/ivAvatar"
             app:layout_constraintTop_toTopOf="parent">
 
         </TextView>

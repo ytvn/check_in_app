@@ -1,5 +1,8 @@
 package com.example.login.Retrofit;
 
+import com.example.login.Login.Result;
+import com.example.login.Menu.Grade.Grade;
+import com.example.login.Menu.Info.Info;
 import com.example.login.Menu.TKB.TKB;
 import com.example.login.Menu.CheckIn.CheckInList;
 
@@ -28,7 +31,7 @@ public interface DataClient {
 ///real
     @FormUrlEncoded
     @POST("api/login")
-    Call<String> login (@Field("mahv") String mahv, @Field("password") String password);
+    Call<Result> login (@Field("mahv") String mahv, @Field("password") String password);
 
     @FormUrlEncoded
     @POST("api/reset")

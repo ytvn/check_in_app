@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.login.Login.Activity_Login;
+import com.squareup.picasso.Picasso;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         btn_Login = (Button) findViewById(R.id.btn_Login);
 
         btn_Login.setOnClickListener(new View.OnClickListener() {
